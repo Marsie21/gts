@@ -1,0 +1,160 @@
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+body {
+	height: 100%;
+	margin: 0;
+	padding: 10;
+	background-repeat: no-repeat;
+	background: rgb(45, 52, 54);
+	font-family: 'Poppins', sans-serif;
+	font-size: 13px;
+
+}
+
+label {
+  color: #808080;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.lbl {
+  display: none;
+}
+
+.focused {
+  display: block;
+}
+
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
+
+.card-container.card {
+    max-width: 350px;
+    padding: 40px;
+}
+
+.btn {
+    font-weight: 700;
+    height: 36px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+/*
+ * Card component
+ */
+
+.container .card {
+    background: rgb(255, 255, 255);
+    /* just in case there no content*/
+    padding: 20px 25px 30px;
+    margin: 0 auto 25px;
+    margin-top: 50px;
+    /* shadows and rounded borders */
+    -moz-box-shadow: 4px 10px 10px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 4px 10px 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 4px 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+#login-logo {
+	width: 170px;
+    height: 170px;
+    margin: 0 auto 15px;
+    display: block;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.form-login #inputUsername,
+.form-login #inputPassword {
+    direction: ltr;
+    height: 44px;
+    font-size: 16px;
+}
+
+.form-login input[type=password],
+.form-login input[type=text]{
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    z-index: 1;
+    font-size: 16px;
+    letter-spacing: 1px;
+    position: relative;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.form-login button { 
+	width: 50%;
+	margin-left: 25%;
+	margin-right: 25%;
+    display: block;
+    margin-bottom: 10px;
+    z-index: 1;
+    font-size: 16px;
+    letter-spacing: 1px;
+    position: relative;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.form-login input[type=password],
+.form-login input[type=text] {
+	background: transparent;
+    border: none;
+    border-bottom: 2px solid #808080;
+    color: #808080;                  
+}
+
+::-webkit-input-placeholder {
+	color: #808080;
+}
+
+.form-login .textbox:focus {
+    outline: none;
+}
+
+#error-msg {
+    margin-bottom: 0 !important;
+}
+
+.button_base {
+    border: 1px solid #808080;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    -moz-box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.4);
+    box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.4);
+}
+
+.button_base:hover {
+	background: #3333ff;
+	color: #fff;
+	border: none;
+	-moz-transition: 1.5s;
+    -webkit-transition: 1.5s;
+	transition: .2s;
+	cursor: pointer;
+}
+
+a {
+    color: #3396ff !important;
+}
+
+
+
+/* Register Style */
+

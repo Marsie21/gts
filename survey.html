@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title>Survey</title>
+
+        <!-- Bootstrap CDN -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- Our Custom CSS -->
+        <link rel="stylesheet" type="text/css" href="css/register.css"/>
+        <!-- FONT AWESOME -->
+        <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+    </head>
+    <body>
+    <div class="container">
+		<form id="regForm" class="form-register card card-container" action = "survey.php" method = "POST">
+			<div class="title">
+				<h3>Survey</h3>
+			</div>
+			<!-- One "tab" for each step in the form: -->
+			<!-- Survey start -->
+			<!-- Job info tab -->
+			<div class="job-info tab" > 
+		        <div class="row">
+		           <div class="form-group col-md-6">
+		           		<label class="lbl">Current Job Position</label>
+		                <input type="text" id="c_job_post" class="inputbox" placeholder="Current Job Position" name="c_post">
+		            </div>
+		            <div class="form-group col-md-6">
+		            	<label class="lbl">Company Affliation</label>
+		                <input type="text" class="inputbox" id="company_name" placeholder="Company Affliation" name="company_name">
+		            </div>
+		        </div>
+		        <div class="form-group">
+		            <label class="lbl">Company Address</label>
+		            <input type="text" class="inputbox" id="company_add" placeholder="Company Address" name="company_add">
+		        </div>
+		        <div class="row">
+			        <div class="form-group col-md-6">
+			            <label class="lbl">Approximate Monthly Salary</label>
+			            <input type="text" class="number inputbox" id="monthly_salary" placeholder="Approximate Monthly Salary" name="monthly_salary">
+			        </div>
+		        </div>
+			    <div class="form-group">
+			        <label>
+			         <span>Have you been employed immediately 6 months or less after graduation?</span>
+			        </label>
+			        <div class="radio">
+						<input type="radio" name="opt6months" value="Yes"><label>Yes</label>
+					</div>
+					<div class="radio">
+						<input type="radio" name="opt6months" value="No"><label>No</label>
+					</div>
+			    </div>
+			    <div class="form-group">
+			    	<label>
+			    		<span>In your first employment,which of the following has been your source?</span>
+			    	</label>
+			    	<div class="row">
+				    	<div class="col-md-6">
+					    	<div class="checkbox">
+							  <label><input type="checkbox" name="source[]" value="National University Job Fair"> National University Job Fair</label>
+							</div>
+							<div class="checkbox">
+							  <label><input type="checkbox" name="source[]" value="Academic Department/Faculty Referral"> Academic Department/Faculty Referral</label>
+							</div>
+							<div class="checkbox">
+							  <label><input type="checkbox" name="source[]" value="Guidance Placement Referral"> Guidance Placement Referral</label>
+							</div>
+							<div class="checkbox">
+							  <label><input type="checkbox" name="source[]" value="OJT site"> OJT site</label>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="checkbox">
+							  <label><input type="checkbox" name="source[]" value="Classified Ads (Printed/Electronic)"> Classified Ads (Printed/Electronic)</label>
+							</div>
+							<div class="checkbox">
+							  <label><input type="checkbox" name="source[]" value="Walk-in Application"> Walk-in Application</label>
+							</div>
+							<div class="checkbox">
+							  <label><input type="checkbox" name="source[]" value="Family and Friends Referral"> Family and Friends Referral</label>
+							</div>
+						</div>
+					</div>
+			    </div>
+			</div>
+		    <!-- tab2 -->
+			<div class="job-info tab">
+				<div class="form-group">
+					<label>
+						<span>Do you think your getting jobs related to your experience, skills and knowledge learned in National University?</span>
+					</label>
+					<div class="radio">
+						<input type="radio" name="optRelatedJob" value="Yes"> <label> Yes</label>
+					</div>
+					<div class="radio">
+						<input type="radio" name="optRelatedJob" value="No"> <label> No</label>
+					</div>
+				</div>
+				<div class="form-group">
+					<label>
+						<span>Have you been promoted in your current job?</span>
+					</label>
+					<div class="radio">
+						<input type="radio" name="optPromoted" value="Yes"> <label> Yes</label>
+					</div>
+					<div class="radio">
+						<input type="radio" name="optPromoted" value="No"> <label> No</label>
+					</div>
+				</div>
+				<div class="form-group">
+					<label>
+						<span>Based on the evaluation of your superiors, how do they rate your work performance using the scale below?</span>
+					</label>
+					<div class="radio">
+						<input type="radio" name="optRated" value="Exemplary"> <label> Exemplary</label>
+					</div>
+					<div class="radio">
+						<input type="radio" name="optRated" value="Proficient"> <label> Proficient</label>
+					</div>
+					<div class="radio">
+						<input type="radio" name="optRated" value="Needs Improvement"> <label> Needs Improvement</label>
+					</div>
+					<div class="radio">
+						<input type="radio" name="optRated" value="Unsatisfactory"> <label> Unsatisfactory</label>
+					</div>
+				</div>
+			</div>
+			<!-- If the alumni have a business -->
+			<div id="bussiness_form" class="tab">
+				<div class="form-group">
+		        	<label>
+			    		<span> In case of Self-Employment; please answer this</span>
+			    	</label>
+			    	<br>
+			    	<br>
+				    <label>
+				        <span> Do you have your own business?</span>
+				    </label>
+				    <div id="selfEmp" class="row">
+						<div class="radio col-md-2">
+							<input type="radio" name="optSelfEmp" value="Yes"> <label> Yes</label>
+						</div>
+						<div class="radio col-md-2">
+							<input type="radio" name="optSelfEmp" value="No"> <label> No</label>
+						</div>
+					</div>
+					<div id="business">
+				        <!-- load business forms here -->
+				    </div>
+		        </div> 
+			</div>
+		    
+
+			<br>
+			<div style="overflow:auto;">
+				<div style="float:right;">
+					<button type="button" id="prevBtn" class="btn"><i class="glyphicon glyphicon-chevron-left" aria-hidden="true"></i><span> Previous</span></button>
+					<button type="button" id="nextBtn" class="btn"><i class="glyphicon glyphicon-chevron-right" aria-hidden="true"></i><span> Next</span></button>
+					<a class="btn btn-danger" id="cancelBtn" href="login.html"><span>Cancel </span><i class="glyphicon glyphicon-remove-sign" aria-hidden="true"></i></a>
+				</div>
+			</div>
+
+				<!-- Circles which indicates the steps of the form: -->
+			<div id="stepIndicator" style="text-align:center;margin-top:40px;">
+				<span class="step"></span>
+				<span class="step"></span>
+				<span class="step"></span>
+			</div>		
+		</form>
+	</div>
+
+        <!-- Modal confirmation-->
+        <div class="modal fade" id="confirm-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="exampleModalLongTitle">Confirmation</h4>
+              </div>
+              <div class="modal-body" style="text-align: center">
+                <p>Welcome to the Alumni Tracer before you procede we would like you to answer some surveys?</p>
+                <p>Do you want to procede?</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" id="close" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" id="confirm" class="btn btn-primary" data-dismiss="modal">Okay</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+       	<!-- jQuery CDN -->
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	    <!-- Bootstrap Js CDN -->
+	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!-- confirm-modal.js -->
+    	<script type="text/javascript" src="js/confirm-modal.js"></script>
+    	<!-- multiple-form.js -->
+    	<script type="text/javascript" src="js/survey.js"></script>
+    	<!-- input-number.js -->
+        <script type="text/javascript" src="js/input-number.js"></script>
+
+    </body>
+</html>
